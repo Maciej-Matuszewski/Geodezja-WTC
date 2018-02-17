@@ -7,21 +7,51 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		495FBC5C203790DA0020F229 /* OfferDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495FBC5B203790DA0020F229 /* OfferDetailsView.swift */; };
+		495FBC5E2037ACAC0020F229 /* OfferModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495FBC5D2037ACAC0020F229 /* OfferModel.swift */; };
+		495FBC622037AE1B0020F229 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495FBC612037AE1B0020F229 /* HomeViewModel.swift */; };
+		495FBC642037BCCE0020F229 /* UIImage+Brightness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495FBC632037BCCE0020F229 /* UIImage+Brightness.swift */; };
 		497EF0BD203218470086821D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497EF0BC203218470086821D /* AppDelegate.swift */; };
-		497EF0BF203218470086821D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497EF0BE203218470086821D /* ViewController.swift */; };
-		497EF0C2203218470086821D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 497EF0C0203218470086821D /* Main.storyboard */; };
 		497EF0C4203218470086821D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 497EF0C3203218470086821D /* Assets.xcassets */; };
 		497EF0C7203218470086821D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 497EF0C5203218470086821D /* LaunchScreen.storyboard */; };
+		497EF0D120321A200086821D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497EF0D020321A200086821D /* HomeViewController.swift */; };
+		497EF0D320321A2E0086821D /* JobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497EF0D220321A2E0086821D /* JobsViewController.swift */; };
+		497EF0D520321A3A0086821D /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497EF0D420321A3A0086821D /* ContactViewController.swift */; };
+		497EF0D920321C620086821D /* String+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497EF0D620321C620086821D /* String+Utility.swift */; };
+		497EF0DA20321C620086821D /* UIColor+AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497EF0D720321C620086821D /* UIColor+AppColors.swift */; };
+		497EF0DB20321C620086821D /* UIFont+AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497EF0D820321C620086821D /* UIFont+AppFonts.swift */; };
+		497EF0DE20321E930086821D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497EF0DD20321E930086821D /* BaseViewController.swift */; };
+		497EF0E02032244F0086821D /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497EF0DF2032244F0086821D /* HomeTableViewCell.swift */; };
+		49DB02BE2036466700CFB459 /* WTCNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DB02BD2036466700CFB459 /* WTCNavigationController.swift */; };
+		49DB02C0203650E800CFB459 /* TransitionIntoOfferDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DB02BF203650E800CFB459 /* TransitionIntoOfferDetailsViewController.swift */; };
+		49E6F53A2033A76200B032F5 /* OfferDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E6F5392033A76200B032F5 /* OfferDetailsViewController.swift */; };
+		681720897D65D6C39DA3D7C4 /* Pods_Geodezja_WTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E3CDC270A68EA53EECE04D /* Pods_Geodezja_WTC.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		127071BD5F57C0746D5A81D1 /* Pods-Geodezja WTC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Geodezja WTC.release.xcconfig"; path = "Pods/Target Support Files/Pods-Geodezja WTC/Pods-Geodezja WTC.release.xcconfig"; sourceTree = "<group>"; };
+		495FBC5B203790DA0020F229 /* OfferDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferDetailsView.swift; sourceTree = "<group>"; };
+		495FBC5D2037ACAC0020F229 /* OfferModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferModel.swift; sourceTree = "<group>"; };
+		495FBC612037AE1B0020F229 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		495FBC632037BCCE0020F229 /* UIImage+Brightness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Brightness.swift"; sourceTree = "<group>"; };
 		497EF0B9203218470086821D /* Geodezja WTC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Geodezja WTC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		497EF0BC203218470086821D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		497EF0BE203218470086821D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		497EF0C1203218470086821D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		497EF0C3203218470086821D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		497EF0C6203218470086821D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		497EF0C8203218470086821D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		497EF0D020321A200086821D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		497EF0D220321A2E0086821D /* JobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewController.swift; sourceTree = "<group>"; };
+		497EF0D420321A3A0086821D /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		497EF0D620321C620086821D /* String+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Utility.swift"; sourceTree = "<group>"; };
+		497EF0D720321C620086821D /* UIColor+AppColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+AppColors.swift"; sourceTree = "<group>"; };
+		497EF0D820321C620086821D /* UIFont+AppFonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+AppFonts.swift"; sourceTree = "<group>"; };
+		497EF0DD20321E930086821D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		497EF0DF2032244F0086821D /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		49DB02BD2036466700CFB459 /* WTCNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTCNavigationController.swift; sourceTree = "<group>"; };
+		49DB02BF203650E800CFB459 /* TransitionIntoOfferDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionIntoOfferDetailsViewController.swift; sourceTree = "<group>"; };
+		49E6F5392033A76200B032F5 /* OfferDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferDetailsViewController.swift; sourceTree = "<group>"; };
+		85E3CDC270A68EA53EECE04D /* Pods_Geodezja_WTC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Geodezja_WTC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC04D780D1156494598A9187 /* Pods-Geodezja WTC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Geodezja WTC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Geodezja WTC/Pods-Geodezja WTC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +59,116 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				681720897D65D6C39DA3D7C4 /* Pods_Geodezja_WTC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B294378345C2F897B389D14 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				85E3CDC270A68EA53EECE04D /* Pods_Geodezja_WTC.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3794306924F192B1DAF858C6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EC04D780D1156494598A9187 /* Pods-Geodezja WTC.debug.xcconfig */,
+				127071BD5F57C0746D5A81D1 /* Pods-Geodezja WTC.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		495FBC65203827680020F229 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				497EF0BC203218470086821D /* AppDelegate.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		495FBC66203827770020F229 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				497EF0DD20321E930086821D /* BaseViewController.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		495FBC67203827940020F229 /* ViewContollers */ = {
+			isa = PBXGroup;
+			children = (
+				497EF0E1203224550086821D /* Home */,
+				495FBC69203827D50020F229 /* OfferDetails */,
+				495FBC6A203828100020F229 /* Jobs */,
+				495FBC6B203828190020F229 /* Contact */,
+			);
+			path = ViewContollers;
+			sourceTree = "<group>";
+		};
+		495FBC68203827C00020F229 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				495FBC5D2037ACAC0020F229 /* OfferModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		495FBC69203827D50020F229 /* OfferDetails */ = {
+			isa = PBXGroup;
+			children = (
+				49E6F5392033A76200B032F5 /* OfferDetailsViewController.swift */,
+				495FBC5B203790DA0020F229 /* OfferDetailsView.swift */,
+				49DB02BF203650E800CFB459 /* TransitionIntoOfferDetailsViewController.swift */,
+			);
+			path = OfferDetails;
+			sourceTree = "<group>";
+		};
+		495FBC6A203828100020F229 /* Jobs */ = {
+			isa = PBXGroup;
+			children = (
+				497EF0D220321A2E0086821D /* JobsViewController.swift */,
+			);
+			path = Jobs;
+			sourceTree = "<group>";
+		};
+		495FBC6B203828190020F229 /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+				497EF0D420321A3A0086821D /* ContactViewController.swift */,
+			);
+			path = Contact;
+			sourceTree = "<group>";
+		};
+		495FBC6C203828240020F229 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				497EF0C3203218470086821D /* Assets.xcassets */,
+				497EF0C5203218470086821D /* LaunchScreen.storyboard */,
+				497EF0C8203218470086821D /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		495FBC6D203828470020F229 /* Custom Elements */ = {
+			isa = PBXGroup;
+			children = (
+				49DB02BD2036466700CFB459 /* WTCNavigationController.swift */,
+			);
+			path = "Custom Elements";
+			sourceTree = "<group>";
+		};
 		497EF0B0203218470086821D = {
 			isa = PBXGroup;
 			children = (
 				497EF0BB203218470086821D /* Geodezja WTC */,
 				497EF0BA203218470086821D /* Products */,
+				3794306924F192B1DAF858C6 /* Pods */,
+				1B294378345C2F897B389D14 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +183,36 @@
 		497EF0BB203218470086821D /* Geodezja WTC */ = {
 			isa = PBXGroup;
 			children = (
-				497EF0BC203218470086821D /* AppDelegate.swift */,
-				497EF0BE203218470086821D /* ViewController.swift */,
-				497EF0C0203218470086821D /* Main.storyboard */,
-				497EF0C3203218470086821D /* Assets.xcassets */,
-				497EF0C5203218470086821D /* LaunchScreen.storyboard */,
-				497EF0C8203218470086821D /* Info.plist */,
+				495FBC65203827680020F229 /* General */,
+				497EF0DC20321C670086821D /* Extensions */,
+				495FBC66203827770020F229 /* Protocols */,
+				495FBC6D203828470020F229 /* Custom Elements */,
+				495FBC68203827C00020F229 /* Models */,
+				495FBC67203827940020F229 /* ViewContollers */,
+				495FBC6C203828240020F229 /* Resources */,
 			);
 			path = "Geodezja WTC";
+			sourceTree = "<group>";
+		};
+		497EF0DC20321C670086821D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				497EF0D620321C620086821D /* String+Utility.swift */,
+				497EF0D720321C620086821D /* UIColor+AppColors.swift */,
+				497EF0D820321C620086821D /* UIFont+AppFonts.swift */,
+				495FBC632037BCCE0020F229 /* UIImage+Brightness.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		497EF0E1203224550086821D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				497EF0D020321A200086821D /* HomeViewController.swift */,
+				495FBC612037AE1B0020F229 /* HomeViewModel.swift */,
+				497EF0DF2032244F0086821D /* HomeTableViewCell.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +222,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 497EF0CB203218470086821D /* Build configuration list for PBXNativeTarget "Geodezja WTC" */;
 			buildPhases = (
+				7A5D9493F2F061AB24D80CF8 /* [CP] Check Pods Manifest.lock */,
 				497EF0B5203218470086821D /* Sources */,
 				497EF0B6203218470086821D /* Frameworks */,
 				497EF0B7203218470086821D /* Resources */,
+				EF08BABFC186E42BE4A5AFF9 /* [CP] Embed Pods Frameworks */,
+				F0C605B59C58F65802E62F55 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -125,33 +279,96 @@
 			files = (
 				497EF0C7203218470086821D /* LaunchScreen.storyboard in Resources */,
 				497EF0C4203218470086821D /* Assets.xcassets in Resources */,
-				497EF0C2203218470086821D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7A5D9493F2F061AB24D80CF8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Geodezja WTC-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF08BABFC186E42BE4A5AFF9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Geodezja WTC/Pods-Geodezja WTC-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/KVNProgress/KVNProgress.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KVNProgress.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Geodezja WTC/Pods-Geodezja WTC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0C605B59C58F65802E62F55 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Geodezja WTC/Pods-Geodezja WTC-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		497EF0B5203218470086821D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				497EF0BF203218470086821D /* ViewController.swift in Sources */,
 				497EF0BD203218470086821D /* AppDelegate.swift in Sources */,
+				497EF0D920321C620086821D /* String+Utility.swift in Sources */,
+				497EF0DB20321C620086821D /* UIFont+AppFonts.swift in Sources */,
+				497EF0D520321A3A0086821D /* ContactViewController.swift in Sources */,
+				495FBC5E2037ACAC0020F229 /* OfferModel.swift in Sources */,
+				49E6F53A2033A76200B032F5 /* OfferDetailsViewController.swift in Sources */,
+				497EF0D120321A200086821D /* HomeViewController.swift in Sources */,
+				495FBC5C203790DA0020F229 /* OfferDetailsView.swift in Sources */,
+				495FBC642037BCCE0020F229 /* UIImage+Brightness.swift in Sources */,
+				497EF0DE20321E930086821D /* BaseViewController.swift in Sources */,
+				49DB02BE2036466700CFB459 /* WTCNavigationController.swift in Sources */,
+				497EF0E02032244F0086821D /* HomeTableViewCell.swift in Sources */,
+				497EF0D320321A2E0086821D /* JobsViewController.swift in Sources */,
+				49DB02C0203650E800CFB459 /* TransitionIntoOfferDetailsViewController.swift in Sources */,
+				495FBC622037AE1B0020F229 /* HomeViewModel.swift in Sources */,
+				497EF0DA20321C620086821D /* UIColor+AppColors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		497EF0C0203218470086821D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				497EF0C1203218470086821D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		497EF0C5203218470086821D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -272,31 +489,33 @@
 		};
 		497EF0CC203218470086821D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC04D780D1156494598A9187 /* Pods-Geodezja WTC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TLA9984P8M;
-				INFOPLIST_FILE = "Geodezja WTC/Info.plist";
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/Geodezja WTC/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.matuszewski.Geodezja-WTC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		497EF0CD203218470086821D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 127071BD5F57C0746D5A81D1 /* Pods-Geodezja WTC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TLA9984P8M;
-				INFOPLIST_FILE = "Geodezja WTC/Info.plist";
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/Geodezja WTC/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.matuszewski.Geodezja-WTC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

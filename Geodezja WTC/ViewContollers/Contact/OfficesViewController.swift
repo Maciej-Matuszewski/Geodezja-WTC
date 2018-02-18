@@ -81,8 +81,11 @@ extension OfficesViewController: BaseViewController {
     }
 
     func call(to phoneNumber: String) {
-        guard let url = URL(string: "tel:\(phoneNumber)") else { return }
-        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        if let url = URL(string: "telprompt:\(phoneNumber)") {
+            if UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
+        }
     }
 
     func mail(to email: String) {

@@ -15,7 +15,7 @@ class JobsTableViewCell: UITableViewCell {
     private let progressView: UIView = {
         let view = UIView()
         view.backgroundColor = .main
-        view.alpha = 0.1
+        view.alpha = 0.3
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()

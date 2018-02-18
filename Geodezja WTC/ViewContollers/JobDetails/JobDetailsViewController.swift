@@ -62,7 +62,7 @@ extension JobDetailsViewController: BaseViewController {
                 guard let cell = cell as? JobDetailsTableViewCell else { return }
                 cell.titleLabel.text = model.title
                 cell.progress = model.state == .completed ? 1.0 : 0.0
-                cell.frontView.alpha = model.state == .waiting ? 0.3 : model.state == .completed ? 0.7 : 1.0
+                cell.frontView.alpha = model.state == .waiting ? 0.3 :  1.0
                 cell.topLineView.isHidden = index == 0
                 cell.bottomLineView.isHidden = index == (self?.model.stages.count ?? 0) - 1
 

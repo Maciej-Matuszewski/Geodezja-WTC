@@ -9,8 +9,11 @@
 /* Begin PBXBuildFile section */
 		4953C98B20398ABC00EBAC17 /* JobDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4953C9892039887A00EBAC17 /* JobDetailsViewController.swift */; };
 		4953C98C20398ABC00EBAC17 /* JobDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4953C98A2039887A00EBAC17 /* JobDetailsTableViewCell.swift */; };
+		4953C98E2039BF9200EBAC17 /* OfficesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4953C98D2039BF9200EBAC17 /* OfficesViewModel.swift */; };
+		4953C9902039BFB600EBAC17 /* OfficesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4953C98F2039BFB600EBAC17 /* OfficesTableViewCell.swift */; };
+		4953C9922039C00500EBAC17 /* OfferModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4953C9912039C00500EBAC17 /* OfferModel.swift */; };
 		495FBC5C203790DA0020F229 /* OfferDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495FBC5B203790DA0020F229 /* OfferDetailsView.swift */; };
-		495FBC5E2037ACAC0020F229 /* OfferModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495FBC5D2037ACAC0020F229 /* OfferModel.swift */; };
+		495FBC5E2037ACAC0020F229 /* OfficeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495FBC5D2037ACAC0020F229 /* OfficeModel.swift */; };
 		495FBC622037AE1B0020F229 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495FBC612037AE1B0020F229 /* HomeViewModel.swift */; };
 		495FBC642037BCCE0020F229 /* UIImage+Brightness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495FBC632037BCCE0020F229 /* UIImage+Brightness.swift */; };
 		495FBC6F2038D5B10020F229 /* JobsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495FBC6E2038D5B10020F229 /* JobsViewModel.swift */; };
@@ -22,7 +25,7 @@
 		497EF0C7203218470086821D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 497EF0C5203218470086821D /* LaunchScreen.storyboard */; };
 		497EF0D120321A200086821D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497EF0D020321A200086821D /* HomeViewController.swift */; };
 		497EF0D320321A2E0086821D /* JobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497EF0D220321A2E0086821D /* JobsViewController.swift */; };
-		497EF0D520321A3A0086821D /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497EF0D420321A3A0086821D /* ContactViewController.swift */; };
+		497EF0D520321A3A0086821D /* OfficesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497EF0D420321A3A0086821D /* OfficesViewController.swift */; };
 		497EF0D920321C620086821D /* String+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497EF0D620321C620086821D /* String+Utility.swift */; };
 		497EF0DA20321C620086821D /* UIColor+AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497EF0D720321C620086821D /* UIColor+AppColors.swift */; };
 		497EF0DB20321C620086821D /* UIFont+AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497EF0D820321C620086821D /* UIFont+AppFonts.swift */; };
@@ -38,8 +41,11 @@
 		127071BD5F57C0746D5A81D1 /* Pods-Geodezja WTC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Geodezja WTC.release.xcconfig"; path = "Pods/Target Support Files/Pods-Geodezja WTC/Pods-Geodezja WTC.release.xcconfig"; sourceTree = "<group>"; };
 		4953C9892039887A00EBAC17 /* JobDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailsViewController.swift; sourceTree = "<group>"; };
 		4953C98A2039887A00EBAC17 /* JobDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		4953C98D2039BF9200EBAC17 /* OfficesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficesViewModel.swift; sourceTree = "<group>"; };
+		4953C98F2039BFB600EBAC17 /* OfficesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficesTableViewCell.swift; sourceTree = "<group>"; };
+		4953C9912039C00500EBAC17 /* OfferModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferModel.swift; sourceTree = "<group>"; };
 		495FBC5B203790DA0020F229 /* OfferDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferDetailsView.swift; sourceTree = "<group>"; };
-		495FBC5D2037ACAC0020F229 /* OfferModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferModel.swift; sourceTree = "<group>"; };
+		495FBC5D2037ACAC0020F229 /* OfficeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficeModel.swift; sourceTree = "<group>"; };
 		495FBC612037AE1B0020F229 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		495FBC632037BCCE0020F229 /* UIImage+Brightness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Brightness.swift"; sourceTree = "<group>"; };
 		495FBC6E2038D5B10020F229 /* JobsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewModel.swift; sourceTree = "<group>"; };
@@ -53,7 +59,7 @@
 		497EF0C8203218470086821D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		497EF0D020321A200086821D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		497EF0D220321A2E0086821D /* JobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewController.swift; sourceTree = "<group>"; };
-		497EF0D420321A3A0086821D /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		497EF0D420321A3A0086821D /* OfficesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficesViewController.swift; sourceTree = "<group>"; };
 		497EF0D620321C620086821D /* String+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Utility.swift"; sourceTree = "<group>"; };
 		497EF0D720321C620086821D /* UIColor+AppColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+AppColors.swift"; sourceTree = "<group>"; };
 		497EF0D820321C620086821D /* UIFont+AppFonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+AppFonts.swift"; sourceTree = "<group>"; };
@@ -136,7 +142,8 @@
 			isa = PBXGroup;
 			children = (
 				495FBC702038D5DD0020F229 /* JobModel.swift */,
-				495FBC5D2037ACAC0020F229 /* OfferModel.swift */,
+				4953C9912039C00500EBAC17 /* OfferModel.swift */,
+				495FBC5D2037ACAC0020F229 /* OfficeModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -164,7 +171,9 @@
 		495FBC6B203828190020F229 /* Contact */ = {
 			isa = PBXGroup;
 			children = (
-				497EF0D420321A3A0086821D /* ContactViewController.swift */,
+				497EF0D420321A3A0086821D /* OfficesViewController.swift */,
+				4953C98D2039BF9200EBAC17 /* OfficesViewModel.swift */,
+				4953C98F2039BFB600EBAC17 /* OfficesTableViewCell.swift */,
 			);
 			path = Contact;
 			sourceTree = "<group>";
@@ -386,10 +395,13 @@
 				495FBC6F2038D5B10020F229 /* JobsViewModel.swift in Sources */,
 				49724B6C2039819C00578658 /* EmptyStateView.swift in Sources */,
 				497EF0BD203218470086821D /* AppDelegate.swift in Sources */,
+				4953C98E2039BF9200EBAC17 /* OfficesViewModel.swift in Sources */,
+				4953C9922039C00500EBAC17 /* OfferModel.swift in Sources */,
+				4953C9902039BFB600EBAC17 /* OfficesTableViewCell.swift in Sources */,
 				497EF0D920321C620086821D /* String+Utility.swift in Sources */,
 				497EF0DB20321C620086821D /* UIFont+AppFonts.swift in Sources */,
-				497EF0D520321A3A0086821D /* ContactViewController.swift in Sources */,
-				495FBC5E2037ACAC0020F229 /* OfferModel.swift in Sources */,
+				497EF0D520321A3A0086821D /* OfficesViewController.swift in Sources */,
+				495FBC5E2037ACAC0020F229 /* OfficeModel.swift in Sources */,
 				49E6F53A2033A76200B032F5 /* OfferDetailsViewController.swift in Sources */,
 				497EF0D120321A200086821D /* HomeViewController.swift in Sources */,
 				4953C98B20398ABC00EBAC17 /* JobDetailsViewController.swift in Sources */,

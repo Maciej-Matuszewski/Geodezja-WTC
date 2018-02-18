@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let tabBarController = UITabBarController()
         let homeNavigationController = WTCNavigationController(rootViewController: HomeViewController(), tabBarIcon: #imageLiteral(resourceName: "home"), tabBarTitle: "Offers".localized)
         let jobsNavigationController = WTCNavigationController(rootViewController: JobsViewController(), tabBarIcon: #imageLiteral(resourceName: "jobs"), tabBarTitle: "Current jobs".localized)
-        let contactNavigationController = WTCNavigationController(rootViewController: ContactViewController(), tabBarIcon: #imageLiteral(resourceName: "contact"), tabBarTitle: "Contact".localized)
+        let contactNavigationController = WTCNavigationController(rootViewController: OfficesViewController(), tabBarIcon: #imageLiteral(resourceName: "building"), tabBarTitle: "Offices".localized)
         tabBarController.setViewControllers([homeNavigationController, jobsNavigationController, contactNavigationController], animated: false)
         return tabBarController
     }()

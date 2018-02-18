@@ -7,9 +7,13 @@ class WTCNavigationController: UINavigationController {
         viewControllers = [rootViewController]
         tabBarItem.title = tabBarTitle
         tabBarItem.image = tabBarIcon
+        navigationBar.tintColor = .main
+        navigationBar.barTintColor = .white
         navigationBar.prefersLargeTitles = true
         navigationBar.shadowImage = UIImage()
-        navigationBar.barTintColor = .white
+        navigationBar.isTranslucent = false
+        view.backgroundColor = .white
+
     }
 
     @available (*, unavailable)

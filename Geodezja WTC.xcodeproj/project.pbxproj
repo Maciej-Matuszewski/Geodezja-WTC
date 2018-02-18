@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4953C98B20398ABC00EBAC17 /* JobDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4953C9892039887A00EBAC17 /* JobDetailsViewController.swift */; };
+		4953C98C20398ABC00EBAC17 /* JobDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4953C98A2039887A00EBAC17 /* JobDetailsTableViewCell.swift */; };
 		495FBC5C203790DA0020F229 /* OfferDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495FBC5B203790DA0020F229 /* OfferDetailsView.swift */; };
 		495FBC5E2037ACAC0020F229 /* OfferModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495FBC5D2037ACAC0020F229 /* OfferModel.swift */; };
 		495FBC622037AE1B0020F229 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495FBC612037AE1B0020F229 /* HomeViewModel.swift */; };
@@ -14,6 +16,7 @@
 		495FBC6F2038D5B10020F229 /* JobsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495FBC6E2038D5B10020F229 /* JobsViewModel.swift */; };
 		495FBC712038D5DD0020F229 /* JobModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495FBC702038D5DD0020F229 /* JobModel.swift */; };
 		495FBC732038D9C40020F229 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495FBC722038D9C30020F229 /* HomeTableViewCell.swift */; };
+		49724B6C2039819C00578658 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49724B6B2039819C00578658 /* EmptyStateView.swift */; };
 		497EF0BD203218470086821D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497EF0BC203218470086821D /* AppDelegate.swift */; };
 		497EF0C4203218470086821D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 497EF0C3203218470086821D /* Assets.xcassets */; };
 		497EF0C7203218470086821D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 497EF0C5203218470086821D /* LaunchScreen.storyboard */; };
@@ -33,6 +36,8 @@
 
 /* Begin PBXFileReference section */
 		127071BD5F57C0746D5A81D1 /* Pods-Geodezja WTC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Geodezja WTC.release.xcconfig"; path = "Pods/Target Support Files/Pods-Geodezja WTC/Pods-Geodezja WTC.release.xcconfig"; sourceTree = "<group>"; };
+		4953C9892039887A00EBAC17 /* JobDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailsViewController.swift; sourceTree = "<group>"; };
+		4953C98A2039887A00EBAC17 /* JobDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		495FBC5B203790DA0020F229 /* OfferDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferDetailsView.swift; sourceTree = "<group>"; };
 		495FBC5D2037ACAC0020F229 /* OfferModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferModel.swift; sourceTree = "<group>"; };
 		495FBC612037AE1B0020F229 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -40,6 +45,7 @@
 		495FBC6E2038D5B10020F229 /* JobsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewModel.swift; sourceTree = "<group>"; };
 		495FBC702038D5DD0020F229 /* JobModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobModel.swift; sourceTree = "<group>"; };
 		495FBC722038D9C30020F229 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		49724B6B2039819C00578658 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 		497EF0B9203218470086821D /* Geodezja WTC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Geodezja WTC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		497EF0BC203218470086821D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		497EF0C3203218470086821D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -89,6 +95,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		4953C9882039885E00EBAC17 /* JobDetails */ = {
+			isa = PBXGroup;
+			children = (
+				4953C9892039887A00EBAC17 /* JobDetailsViewController.swift */,
+				4953C98A2039887A00EBAC17 /* JobDetailsTableViewCell.swift */,
+			);
+			path = JobDetails;
+			sourceTree = "<group>";
+		};
 		495FBC65203827680020F229 /* General */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +126,7 @@
 				497EF0E1203224550086821D /* Home */,
 				495FBC69203827D50020F229 /* OfferDetails */,
 				495FBC6A203828100020F229 /* Jobs */,
+				4953C9882039885E00EBAC17 /* JobDetails */,
 				495FBC6B203828190020F229 /* Contact */,
 			);
 			path = ViewContollers;
@@ -171,6 +187,14 @@
 			path = "Custom Elements";
 			sourceTree = "<group>";
 		};
+		49724B6D203981E100578658 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				49724B6B2039819C00578658 /* EmptyStateView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		497EF0B0203218470086821D = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +222,7 @@
 				495FBC6D203828470020F229 /* Custom Elements */,
 				495FBC68203827C00020F229 /* Models */,
 				495FBC67203827940020F229 /* ViewContollers */,
+				49724B6D203981E100578658 /* Views */,
 				495FBC6C203828240020F229 /* Resources */,
 			);
 			path = "Geodezja WTC";
@@ -356,8 +381,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4953C98C20398ABC00EBAC17 /* JobDetailsTableViewCell.swift in Sources */,
 				495FBC732038D9C40020F229 /* HomeTableViewCell.swift in Sources */,
 				495FBC6F2038D5B10020F229 /* JobsViewModel.swift in Sources */,
+				49724B6C2039819C00578658 /* EmptyStateView.swift in Sources */,
 				497EF0BD203218470086821D /* AppDelegate.swift in Sources */,
 				497EF0D920321C620086821D /* String+Utility.swift in Sources */,
 				497EF0DB20321C620086821D /* UIFont+AppFonts.swift in Sources */,
@@ -365,6 +392,7 @@
 				495FBC5E2037ACAC0020F229 /* OfferModel.swift in Sources */,
 				49E6F53A2033A76200B032F5 /* OfferDetailsViewController.swift in Sources */,
 				497EF0D120321A200086821D /* HomeViewController.swift in Sources */,
+				4953C98B20398ABC00EBAC17 /* JobDetailsViewController.swift in Sources */,
 				495FBC5C203790DA0020F229 /* OfferDetailsView.swift in Sources */,
 				495FBC642037BCCE0020F229 /* UIImage+Brightness.swift in Sources */,
 				497EF0DE20321E930086821D /* BaseViewController.swift in Sources */,

@@ -46,7 +46,7 @@ class OfferDetailsViewController: UIViewController {
         dismiss(animated: true) {
             guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
             appDelegate.tabBarController.selectedIndex = 1
-            KVNProgress.dismiss()
+            KVNProgress.showSuccess()
         }
     }
 }

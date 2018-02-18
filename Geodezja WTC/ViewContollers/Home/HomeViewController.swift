@@ -38,7 +38,6 @@ extension HomeViewController: BaseViewController {
     }
 
     func configureLayout() {
-        view.backgroundColor = .background
         tableView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(tableView)
         NSLayoutConstraint.activate([

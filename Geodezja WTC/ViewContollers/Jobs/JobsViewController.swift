@@ -15,6 +15,16 @@ class JobsViewController: UIViewController {
         return tableView
     }()
 
+    fileprivate lazy var emptyStateView: UIView = {
+        return EmptyStateView(
+            with: "Ops... There is nothing here :(",
+            size: CGSize(
+                width: view.frame.width,
+                height: tableView.frame.height - (navigationController?.navigationBar.frame.height ?? 0) - (navigationController?.tabBarController?.tabBar.frame.height ?? 0) - 100
+            )
+        )
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
@@ -29,7 +39,6 @@ extension JobsViewController: BaseViewController {
     func configureProperties() {}
 
     func configureLayout() {
-        view.backgroundColor = .background
         tableView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(tableView)
         NSLayoutConstraint.activate([
@@ -43,6 +52,9 @@ extension JobsViewController: BaseViewController {
     func configureReactiveBinding() {
 
         Observable.just(viewModel.jobs)
+            .do(onNext: { [weak self] models in
+                self?.tableView.tableHeaderView = models.isEmpty ? self?.emptyStateView : nil
+            })
             .bind(to: tableView.rx.items(cellIdentifier: "cellIdentifier")) { index, model, cell in
                 guard let cell = cell as? JobsTableViewCell else { return }
                 cell.progress = model.progress
@@ -53,10 +65,11 @@ extension JobsViewController: BaseViewController {
             }
             .disposed(by: disposeBag)
 
-//        tableView.rx.itemSelected
-//            .subscribe(onNext: { [weak self] indexPath in
-//                
-//            })
-//            .disposed(by: disposeBag)
+        tableView.rx.itemSelected
+            .subscribe(onNext: { [weak self] indexPath in
+                guard let model = self?.viewModel.jobs[indexPath.row] else { return }
+                self?.navigationController?.pushViewController(JobDetailsViewController(model: model), animated: true)
+            })
+            .disposed(by: disposeBag)
     }
 }

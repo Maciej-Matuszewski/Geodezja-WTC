@@ -18,7 +18,10 @@ extension BaseViewController where Self: UIViewController {
     }
 
     func configureNavigationController() {
+        view.backgroundColor = .white
         navigationItem.title = controllerTitle
+        navigationItem.backBarButtonItem?.title = ""
+        navigationItem.largeTitleDisplayMode = .always
     }
 }
 

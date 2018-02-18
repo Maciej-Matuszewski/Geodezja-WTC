@@ -23,24 +23,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        configureExternalTools()
+        configure()
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
         return true
     }
 
-    func configureExternalTools() {
+    func configure() {
         initializeKVNProgress()
+
+        let tabBar = UITabBar.appearance()
+        tabBar.tintColor = .main
+        tabBar.barTintColor = .white
+        tabBar.shadowImage = UIImage()
+        tabBar.isTranslucent = false
+
+
     }
 
     func initializeKVNProgress(){
         let config = KVNProgressConfiguration.init()
-        config.backgroundTintColor = .background
-        config.circleStrokeForegroundColor = .black
-        config.successColor = .black
-        config.statusColor = .black
-        config.errorColor = .black
+        config.backgroundTintColor = .white
+        config.circleStrokeForegroundColor = UIColor(white: 0.3, alpha: 0.7)
+        config.successColor = UIColor(white: 0.3, alpha: 0.7)
+        config.statusColor = UIColor(white: 0.3, alpha: 0.7)
+        config.errorColor = UIColor(white: 0.3, alpha: 0.7)
         config.isFullScreen = true
         KVNProgress.setConfiguration(config)
     }

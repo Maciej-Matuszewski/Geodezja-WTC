@@ -11,6 +11,9 @@
 		495FBC5E2037ACAC0020F229 /* OfferModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495FBC5D2037ACAC0020F229 /* OfferModel.swift */; };
 		495FBC622037AE1B0020F229 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495FBC612037AE1B0020F229 /* HomeViewModel.swift */; };
 		495FBC642037BCCE0020F229 /* UIImage+Brightness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495FBC632037BCCE0020F229 /* UIImage+Brightness.swift */; };
+		495FBC6F2038D5B10020F229 /* JobsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495FBC6E2038D5B10020F229 /* JobsViewModel.swift */; };
+		495FBC712038D5DD0020F229 /* JobModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495FBC702038D5DD0020F229 /* JobModel.swift */; };
+		495FBC732038D9C40020F229 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495FBC722038D9C30020F229 /* HomeTableViewCell.swift */; };
 		497EF0BD203218470086821D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497EF0BC203218470086821D /* AppDelegate.swift */; };
 		497EF0C4203218470086821D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 497EF0C3203218470086821D /* Assets.xcassets */; };
 		497EF0C7203218470086821D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 497EF0C5203218470086821D /* LaunchScreen.storyboard */; };
@@ -21,7 +24,7 @@
 		497EF0DA20321C620086821D /* UIColor+AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497EF0D720321C620086821D /* UIColor+AppColors.swift */; };
 		497EF0DB20321C620086821D /* UIFont+AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497EF0D820321C620086821D /* UIFont+AppFonts.swift */; };
 		497EF0DE20321E930086821D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497EF0DD20321E930086821D /* BaseViewController.swift */; };
-		497EF0E02032244F0086821D /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497EF0DF2032244F0086821D /* HomeTableViewCell.swift */; };
+		497EF0E02032244F0086821D /* JobsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497EF0DF2032244F0086821D /* JobsTableViewCell.swift */; };
 		49DB02BE2036466700CFB459 /* WTCNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DB02BD2036466700CFB459 /* WTCNavigationController.swift */; };
 		49DB02C0203650E800CFB459 /* TransitionIntoOfferDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DB02BF203650E800CFB459 /* TransitionIntoOfferDetailsViewController.swift */; };
 		49E6F53A2033A76200B032F5 /* OfferDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E6F5392033A76200B032F5 /* OfferDetailsViewController.swift */; };
@@ -34,6 +37,9 @@
 		495FBC5D2037ACAC0020F229 /* OfferModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferModel.swift; sourceTree = "<group>"; };
 		495FBC612037AE1B0020F229 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		495FBC632037BCCE0020F229 /* UIImage+Brightness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Brightness.swift"; sourceTree = "<group>"; };
+		495FBC6E2038D5B10020F229 /* JobsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewModel.swift; sourceTree = "<group>"; };
+		495FBC702038D5DD0020F229 /* JobModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobModel.swift; sourceTree = "<group>"; };
+		495FBC722038D9C30020F229 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		497EF0B9203218470086821D /* Geodezja WTC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Geodezja WTC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		497EF0BC203218470086821D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		497EF0C3203218470086821D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -46,7 +52,7 @@
 		497EF0D720321C620086821D /* UIColor+AppColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+AppColors.swift"; sourceTree = "<group>"; };
 		497EF0D820321C620086821D /* UIFont+AppFonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+AppFonts.swift"; sourceTree = "<group>"; };
 		497EF0DD20321E930086821D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		497EF0DF2032244F0086821D /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		497EF0DF2032244F0086821D /* JobsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsTableViewCell.swift; sourceTree = "<group>"; };
 		49DB02BD2036466700CFB459 /* WTCNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTCNavigationController.swift; sourceTree = "<group>"; };
 		49DB02BF203650E800CFB459 /* TransitionIntoOfferDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionIntoOfferDetailsViewController.swift; sourceTree = "<group>"; };
 		49E6F5392033A76200B032F5 /* OfferDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferDetailsViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +119,7 @@
 		495FBC68203827C00020F229 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				495FBC702038D5DD0020F229 /* JobModel.swift */,
 				495FBC5D2037ACAC0020F229 /* OfferModel.swift */,
 			);
 			path = Models;
@@ -132,6 +139,8 @@
 			isa = PBXGroup;
 			children = (
 				497EF0D220321A2E0086821D /* JobsViewController.swift */,
+				497EF0DF2032244F0086821D /* JobsTableViewCell.swift */,
+				495FBC6E2038D5B10020F229 /* JobsViewModel.swift */,
 			);
 			path = Jobs;
 			sourceTree = "<group>";
@@ -209,8 +218,8 @@
 			isa = PBXGroup;
 			children = (
 				497EF0D020321A200086821D /* HomeViewController.swift */,
+				495FBC722038D9C30020F229 /* HomeTableViewCell.swift */,
 				495FBC612037AE1B0020F229 /* HomeViewModel.swift */,
-				497EF0DF2032244F0086821D /* HomeTableViewCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -347,6 +356,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				495FBC732038D9C40020F229 /* HomeTableViewCell.swift in Sources */,
+				495FBC6F2038D5B10020F229 /* JobsViewModel.swift in Sources */,
 				497EF0BD203218470086821D /* AppDelegate.swift in Sources */,
 				497EF0D920321C620086821D /* String+Utility.swift in Sources */,
 				497EF0DB20321C620086821D /* UIFont+AppFonts.swift in Sources */,
@@ -358,7 +369,8 @@
 				495FBC642037BCCE0020F229 /* UIImage+Brightness.swift in Sources */,
 				497EF0DE20321E930086821D /* BaseViewController.swift in Sources */,
 				49DB02BE2036466700CFB459 /* WTCNavigationController.swift in Sources */,
-				497EF0E02032244F0086821D /* HomeTableViewCell.swift in Sources */,
+				495FBC712038D5DD0020F229 /* JobModel.swift in Sources */,
+				497EF0E02032244F0086821D /* JobsTableViewCell.swift in Sources */,
 				497EF0D320321A2E0086821D /* JobsViewController.swift in Sources */,
 				49DB02C0203650E800CFB459 /* TransitionIntoOfferDetailsViewController.swift in Sources */,
 				495FBC622037AE1B0020F229 /* HomeViewModel.swift in Sources */,

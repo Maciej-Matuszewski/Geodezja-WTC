@@ -31,6 +31,8 @@ class HomeTableViewCell: UITableViewCell {
         frontView.backgroundColor = UIColor.clear
         frontView.layer.cornerRadius = 16
         frontView.translatesAutoresizingMaskIntoConstraints = false
+        frontView.layer.shadowOffset = CGSize(width: 0, height: 1)
+        frontView.layer.shadowOpacity = 0.4
         addSubview(frontView)
         NSLayoutConstraint.activate([
             frontView.topAnchor.constraint(equalTo: topAnchor, constant: 8),

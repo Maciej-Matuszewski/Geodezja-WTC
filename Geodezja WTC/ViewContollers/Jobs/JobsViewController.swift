@@ -1,45 +1,62 @@
-//
-//  JobsViewController.swift
-//  Geodezja WTC
-//
-//  Created by Maciej Matuszewski on 12.02.2018.
-//  Copyright © 2018 Maciej Matuszewski. All rights reserved.
-//
-
 import UIKit
+import RxSwift
+import RxCocoa
 
 class JobsViewController: UIViewController {
 
-    init() {
-        super.init(nibName: nil, bundle: nil)
-        navigationController?.tabBarItem.title = "Current jobs".localized
-    }
-
-    @available (*, unavailable)
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    fileprivate let disposeBag = DisposeBag()
+    fileprivate let viewModel = JobsViewModel()
+    fileprivate let tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.tableFooterView = UIView()
+        tableView.register(JobsTableViewCell.self, forCellReuseIdentifier: "cellIdentifier")
+        tableView.rowHeight = 110
+        tableView.separatorColor = .clear
+        return tableView
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        configure()
+    }
+}
 
-        // Do any additional setup after loading the view.
+extension JobsViewController: BaseViewController {
+    var controllerTitle: String {
+        return "Current jobs".localized
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func configureProperties() {}
+
+    func configureLayout() {
+        view.backgroundColor = .background
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(tableView)
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            tableView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor),
+            tableView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
     }
-    
 
-    /*
-    // MARK: - Navigation
+    func configureReactiveBinding() {
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        Observable.just(viewModel.jobs)
+            .bind(to: tableView.rx.items(cellIdentifier: "cellIdentifier")) { index, model, cell in
+                guard let cell = cell as? JobsTableViewCell else { return }
+                cell.progress = model.progress
+                cell.titleLabel.text = model.title
+                cell.addressLabel.text = model.address
+                cell.statusLabel.text = model.status
+                cell.actionMark.isHidden = !model.needAction
+            }
+            .disposed(by: disposeBag)
+
+//        tableView.rx.itemSelected
+//            .subscribe(onNext: { [weak self] indexPath in
+//                
+//            })
+//            .disposed(by: disposeBag)
     }
-    */
-
 }

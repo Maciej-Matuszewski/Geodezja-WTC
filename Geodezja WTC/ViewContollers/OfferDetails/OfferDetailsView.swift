@@ -9,6 +9,14 @@ class OfferDetailsView: UIView {
         return scrollView
     }()
 
+    let shadowView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.layer.shadowOffset = CGSize(width: 0, height: 1)
+        view.layer.shadowOpacity = 0.4
+        return view
+    }()
+
     let backgroundImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.backgroundColor = .background
@@ -75,12 +83,20 @@ class OfferDetailsView: UIView {
             scrollView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
         ])
 
-        scrollView.addSubview(backgroundImageView)
+        scrollView.addSubview(shadowView)
         NSLayoutConstraint.activate([
-            backgroundImageView.topAnchor.constraint(equalTo: scrollView.topAnchor),
-            backgroundImageView.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
-            backgroundImageView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
-            backgroundImageView.heightAnchor.constraint(equalToConstant: 204)
+            shadowView.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            shadowView.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
+            shadowView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
+            shadowView.heightAnchor.constraint(equalToConstant: 204)
+        ])
+
+        shadowView.addSubview(backgroundImageView)
+        NSLayoutConstraint.activate([
+            backgroundImageView.topAnchor.constraint(equalTo: shadowView.topAnchor),
+            backgroundImageView.leftAnchor.constraint(equalTo: shadowView.leftAnchor),
+            backgroundImageView.rightAnchor.constraint(equalTo: shadowView.rightAnchor),
+            backgroundImageView.bottomAnchor.constraint(equalTo: shadowView.bottomAnchor)
         ])
 
         backgroundImageView.addSubview(titleLabel)
@@ -93,7 +109,7 @@ class OfferDetailsView: UIView {
 
         scrollView.addSubview(descriptionLabel)
         NSLayoutConstraint.activate([
-            descriptionLabel.topAnchor.constraint(equalTo: backgroundImageView.bottomAnchor, constant: 16),
+            descriptionLabel.topAnchor.constraint(equalTo: shadowView.bottomAnchor, constant: 16),
             descriptionLabel.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
             descriptionLabel.widthAnchor.constraint(equalTo: scrollView.widthAnchor, constant: -16),
             descriptionLabel.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -16)

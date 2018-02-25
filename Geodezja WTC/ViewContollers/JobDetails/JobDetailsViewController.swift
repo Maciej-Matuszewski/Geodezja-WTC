@@ -63,7 +63,7 @@ extension JobDetailsViewController: BaseViewController {
                 guard let cell = cell as? JobDetailsTableViewCell else { return }
                 cell.titleLabel.text = model.title
                 cell.progress = model.state == .completed ? 1.0 : 0.0
-                cell.frontView.alpha = model.state == .waiting ? 0.3 :  1.0
+                cell.frontView.alpha = model.state == .waiting ? 0.4 :  1.0
                 cell.topLineView.isHidden = index == 0
                 cell.bottomLineView.isHidden = index == (self?.model.value?.stages.count ?? 0) - 1
 
@@ -76,12 +76,16 @@ extension JobDetailsViewController: BaseViewController {
                     cell.actionMark.text = "✉︎"
                     cell.actionMark.isHidden = false
                     break
-                case (.accept, .completed):
+                case (.accept, .completed), (.file, .completed):
                     cell.actionMark.text = "✔︎"
                     cell.actionMark.isHidden = false
                     break
                 case (.accept, .inProgress):
-                    cell.actionMark.text = "!"
+                    cell.actionMark.text = "✍︎"
+                    cell.actionMark.isHidden = false
+                    break
+                case (.file, .inProgress):
+                    cell.actionMark.text = "＋"
                     cell.actionMark.isHidden = false
                     break
                 }

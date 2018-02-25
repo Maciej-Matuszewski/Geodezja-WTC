@@ -2,6 +2,7 @@ import Foundation
 import UIKit
 
 struct JobModel: Codable {
+    var id: String?
     let title: String
     let address: String
     let stages: [JobStageModel]
@@ -24,7 +25,7 @@ struct JobModel: Codable {
     }
 
     var needAction: Bool {
-        return stages.first(where: { $0.state == .inProgress && $0.action == .accept }) != nil
+        return stages.first(where: { $0.state == .inProgress && ($0.action == .accept || $0.action == .file) }) != nil
     }
 }
 
@@ -39,6 +40,7 @@ enum JobStageAction: Int, Codable {
     case none = 0
     case document = 1
     case accept = 2
+    case file = 3
 }
 
 enum JobStageState: Int, Codable {

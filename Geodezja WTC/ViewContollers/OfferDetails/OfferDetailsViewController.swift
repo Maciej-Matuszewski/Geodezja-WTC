@@ -1,6 +1,8 @@
 import UIKit
 import KVNProgress
 import FirebaseAuth
+import FirebaseDatabase
+import CodableFirebase
 import SDWebImage
 
 class OfferDetailsViewController: UIViewController {
@@ -60,14 +62,24 @@ class OfferDetailsViewController: UIViewController {
 
     private func addOrderTo(_ user: User) {
 
-        
-
-
         KVNProgress.show()
-        dismiss(animated: true) {
-            guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
-            appDelegate.tabBarController.selectedIndex = 1
-            KVNProgress.showSuccess()
+        let reference = Database.database()
+        reference.reference(withPath: "templates").child(offerModel.templateID).observeSingleEvent(of: .value) { (snapshot, error) in
+            guard let template = snapshot.value as? [String : AnyObject] else {
+                KVNProgress.showError()
+                return
+            }
+            reference.reference(withPath: "jobs").child(user.uid).childByAutoId().setValue(template, withCompletionBlock: { [weak self] (error, reference) in
+                if error != nil {
+                    KVNProgress.showError()
+                    return
+                }
+                self?.dismiss(animated: true) {
+                    guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+                    appDelegate.tabBarController.selectedIndex = 1
+                    KVNProgress.showSuccess()
+                }
+            })
         }
     }
 }

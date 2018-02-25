@@ -1,6 +1,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import FirebaseAuth
 
 class JobsViewController: UIViewController {
 
@@ -15,15 +16,26 @@ class JobsViewController: UIViewController {
         return tableView
     }()
 
-    fileprivate lazy var emptyStateView: UIView = {
-        return EmptyStateView(
-            with: "Ops... There is nothing here :(".localized,
-            size: CGSize(
-                width: view.frame.width,
-                height: tableView.frame.height - (navigationController?.navigationBar.frame.height ?? 0) - (navigationController?.tabBarController?.tabBar.frame.height ?? 0) - 100
-            )
+    fileprivate var emptyStateView: UIView {
+        let viewSize = CGSize(
+            width: view.frame.width,
+            height: tableView.frame.height - (navigationController?.navigationBar.frame.height ?? 0) - (navigationController?.tabBarController?.tabBar.frame.height ?? 0) - 100
         )
-    }()
+        return Auth.auth().currentUser != nil ? EmptyStateView(
+            with: "Ops... There is nothing here :(".localized,
+            size: viewSize
+        ) : LoginStateView(
+            with: "Please login to display yours current jobs!".localized,
+            size: viewSize,
+            onButtonClick: { [weak self] in
+                let phoneLoginViewController = PhoneLoginViewController()
+                phoneLoginViewController.callback = { [weak self] _ in
+                    self?.viewModel.loadData()
+                }
+                self?.present(phoneLoginViewController, animated: true, completion: nil)
+            }
+        )
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,7 +70,7 @@ extension JobsViewController: BaseViewController {
                 guard let cell = cell as? JobsTableViewCell else { return }
                 cell.progress = model.progress
                 cell.titleLabel.text = model.title
-                cell.addressLabel.text = model.address
+                cell.addressLabel.text = model.id
                 cell.statusLabel.text = model.status
                 cell.actionMark.isHidden = !model.needAction
             }

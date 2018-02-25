@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49210C15204301ED00C793D8 /* LoginStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49210C14204301ED00C793D8 /* LoginStateView.swift */; };
 		4953C98B20398ABC00EBAC17 /* JobDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4953C9892039887A00EBAC17 /* JobDetailsViewController.swift */; };
 		4953C98C20398ABC00EBAC17 /* JobDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4953C98A2039887A00EBAC17 /* JobDetailsTableViewCell.swift */; };
 		4953C98E2039BF9200EBAC17 /* OfficesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4953C98D2039BF9200EBAC17 /* OfficesViewModel.swift */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		127071BD5F57C0746D5A81D1 /* Pods-Geodezja WTC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Geodezja WTC.release.xcconfig"; path = "Pods/Target Support Files/Pods-Geodezja WTC/Pods-Geodezja WTC.release.xcconfig"; sourceTree = "<group>"; };
+		49210C14204301ED00C793D8 /* LoginStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStateView.swift; sourceTree = "<group>"; };
 		4953C9892039887A00EBAC17 /* JobDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailsViewController.swift; sourceTree = "<group>"; };
 		4953C98A2039887A00EBAC17 /* JobDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		4953C98D2039BF9200EBAC17 /* OfficesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficesViewModel.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				49724B6B2039819C00578658 /* EmptyStateView.swift */,
+				49210C14204301ED00C793D8 /* LoginStateView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -431,6 +434,7 @@
 				4953C98E2039BF9200EBAC17 /* OfficesViewModel.swift in Sources */,
 				4953C9922039C00500EBAC17 /* OfferModel.swift in Sources */,
 				4953C9902039BFB600EBAC17 /* OfficesTableViewCell.swift in Sources */,
+				49210C15204301ED00C793D8 /* LoginStateView.swift in Sources */,
 				497EF0D920321C620086821D /* String+Utility.swift in Sources */,
 				497EF0DB20321C620086821D /* UIFont+AppFonts.swift in Sources */,
 				497EF0D520321A3A0086821D /* OfficesViewController.swift in Sources */,

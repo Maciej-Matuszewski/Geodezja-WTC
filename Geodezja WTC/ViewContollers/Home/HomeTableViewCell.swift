@@ -8,6 +8,7 @@ class HomeTableViewCell: UITableViewCell {
         imageView.layer.masksToBounds = true
         imageView.contentMode = .scaleAspectFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.backgroundColor = .background
         return imageView
     }()
 

@@ -1,19 +1,12 @@
-//
-//  AppDelegate.swift
-//  Geodezja WTC
-//
-//  Created by Maciej Matuszewski on 12.02.2018.
-//  Copyright © 2018 Maciej Matuszewski. All rights reserved.
-//
-
 import UIKit
 import KVNProgress
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    let tabBarController: UITabBarController = {
+    lazy var tabBarController: UITabBarController = {
         let tabBarController = UITabBarController()
         let homeNavigationController = WTCNavigationController(rootViewController: HomeViewController(), tabBarIcon: #imageLiteral(resourceName: "home"), tabBarTitle: "Offers".localized)
         let jobsNavigationController = WTCNavigationController(rootViewController: JobsViewController(), tabBarIcon: #imageLiteral(resourceName: "jobs"), tabBarTitle: "Current jobs".localized)
@@ -32,14 +25,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func configure() {
         initializeKVNProgress()
-
+        FirebaseApp.configure()
+//        try? Auth.auth().signOut()
         let tabBar = UITabBar.appearance()
         tabBar.tintColor = .main
         tabBar.barTintColor = .white
         tabBar.shadowImage = UIImage()
         tabBar.isTranslucent = false
-
-
     }
 
     func initializeKVNProgress(){

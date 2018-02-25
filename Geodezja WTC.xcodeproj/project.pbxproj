@@ -31,6 +31,10 @@
 		497EF0DB20321C620086821D /* UIFont+AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497EF0D820321C620086821D /* UIFont+AppFonts.swift */; };
 		497EF0DE20321E930086821D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497EF0DD20321E930086821D /* BaseViewController.swift */; };
 		497EF0E02032244F0086821D /* JobsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497EF0DF2032244F0086821D /* JobsTableViewCell.swift */; };
+		49D4C35C204189AC0014DD45 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49D4C35B204189AB0014DD45 /* GoogleService-Info.plist */; };
+		49D4C36120418DFF0014DD45 /* PhoneLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D4C36020418DFF0014DD45 /* PhoneLoginViewController.swift */; };
+		49D4C36420418E480014DD45 /* PhoneLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D4C36320418E480014DD45 /* PhoneLoginView.swift */; };
+		49D4C366204195210014DD45 /* WTCDialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D4C365204195210014DD45 /* WTCDialogView.swift */; };
 		49DB02BE2036466700CFB459 /* WTCNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DB02BD2036466700CFB459 /* WTCNavigationController.swift */; };
 		49DB02C0203650E800CFB459 /* TransitionIntoOfferDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DB02BF203650E800CFB459 /* TransitionIntoOfferDetailsViewController.swift */; };
 		49E6F53A2033A76200B032F5 /* OfferDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E6F5392033A76200B032F5 /* OfferDetailsViewController.swift */; };
@@ -65,6 +69,10 @@
 		497EF0D820321C620086821D /* UIFont+AppFonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+AppFonts.swift"; sourceTree = "<group>"; };
 		497EF0DD20321E930086821D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		497EF0DF2032244F0086821D /* JobsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsTableViewCell.swift; sourceTree = "<group>"; };
+		49D4C35B204189AB0014DD45 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		49D4C36020418DFF0014DD45 /* PhoneLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneLoginViewController.swift; sourceTree = "<group>"; };
+		49D4C36320418E480014DD45 /* PhoneLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneLoginView.swift; sourceTree = "<group>"; };
+		49D4C365204195210014DD45 /* WTCDialogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTCDialogView.swift; sourceTree = "<group>"; };
 		49DB02BD2036466700CFB459 /* WTCNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTCNavigationController.swift; sourceTree = "<group>"; };
 		49DB02BF203650E800CFB459 /* TransitionIntoOfferDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionIntoOfferDetailsViewController.swift; sourceTree = "<group>"; };
 		49E6F5392033A76200B032F5 /* OfferDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferDetailsViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +142,7 @@
 				495FBC6A203828100020F229 /* Jobs */,
 				4953C9882039885E00EBAC17 /* JobDetails */,
 				495FBC6B203828190020F229 /* Contact */,
+				49D4C36220418E2C0014DD45 /* PhoneLogin */,
 			);
 			path = ViewContollers;
 			sourceTree = "<group>";
@@ -141,8 +150,8 @@
 		495FBC68203827C00020F229 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				495FBC702038D5DD0020F229 /* JobModel.swift */,
 				4953C9912039C00500EBAC17 /* OfferModel.swift */,
+				495FBC702038D5DD0020F229 /* JobModel.swift */,
 				495FBC5D2037ACAC0020F229 /* OfficeModel.swift */,
 			);
 			path = Models;
@@ -182,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				497EF0C3203218470086821D /* Assets.xcassets */,
+				49D4C35B204189AB0014DD45 /* GoogleService-Info.plist */,
 				497EF0C5203218470086821D /* LaunchScreen.storyboard */,
 				497EF0C8203218470086821D /* Info.plist */,
 			);
@@ -258,6 +268,16 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		49D4C36220418E2C0014DD45 /* PhoneLogin */ = {
+			isa = PBXGroup;
+			children = (
+				49D4C36020418DFF0014DD45 /* PhoneLoginViewController.swift */,
+				49D4C36320418E480014DD45 /* PhoneLoginView.swift */,
+				49D4C365204195210014DD45 /* WTCDialogView.swift */,
+			);
+			path = PhoneLogin;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -322,6 +342,7 @@
 			files = (
 				497EF0C7203218470086821D /* LaunchScreen.storyboard in Resources */,
 				497EF0C4203218470086821D /* Assets.xcassets in Resources */,
+				49D4C35C204189AC0014DD45 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,15 +374,27 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Geodezja WTC/Pods-Geodezja WTC-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CodableFirebase/CodableFirebase.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/KVNProgress/KVNProgress.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CodableFirebase.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KVNProgress.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -401,14 +434,17 @@
 				497EF0D920321C620086821D /* String+Utility.swift in Sources */,
 				497EF0DB20321C620086821D /* UIFont+AppFonts.swift in Sources */,
 				497EF0D520321A3A0086821D /* OfficesViewController.swift in Sources */,
+				49D4C366204195210014DD45 /* WTCDialogView.swift in Sources */,
 				495FBC5E2037ACAC0020F229 /* OfficeModel.swift in Sources */,
 				49E6F53A2033A76200B032F5 /* OfferDetailsViewController.swift in Sources */,
 				497EF0D120321A200086821D /* HomeViewController.swift in Sources */,
 				4953C98B20398ABC00EBAC17 /* JobDetailsViewController.swift in Sources */,
+				49D4C36120418DFF0014DD45 /* PhoneLoginViewController.swift in Sources */,
 				495FBC5C203790DA0020F229 /* OfferDetailsView.swift in Sources */,
 				495FBC642037BCCE0020F229 /* UIImage+Brightness.swift in Sources */,
 				497EF0DE20321E930086821D /* BaseViewController.swift in Sources */,
 				49DB02BE2036466700CFB459 /* WTCNavigationController.swift in Sources */,
+				49D4C36420418E480014DD45 /* PhoneLoginView.swift in Sources */,
 				495FBC712038D5DD0020F229 /* JobModel.swift in Sources */,
 				497EF0E02032244F0086821D /* JobsTableViewCell.swift in Sources */,
 				497EF0D320321A2E0086821D /* JobsViewController.swift in Sources */,
@@ -545,10 +581,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2FP33MYDL3;
+				DEVELOPMENT_TEAM = 6SZUYZ5FFC;
 				INFOPLIST_FILE = "$(SRCROOT)/Geodezja WTC/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.czarnecka.Geodezja-WTC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.matuszewski.geodezjaWTC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -561,10 +597,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2FP33MYDL3;
+				DEVELOPMENT_TEAM = 6SZUYZ5FFC;
 				INFOPLIST_FILE = "$(SRCROOT)/Geodezja WTC/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.czarnecka.Geodezja-WTC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.matuszewski.geodezjaWTC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;

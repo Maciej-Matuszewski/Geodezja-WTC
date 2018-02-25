@@ -1,8 +1,8 @@
 import Foundation
 import UIKit
 
-struct OfferModel {
+struct OfferModel: Codable {
     let title: String
-    let image: UIImage
+    let imageURL: String
     let description: String
 }

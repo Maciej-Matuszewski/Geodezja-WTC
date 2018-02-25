@@ -1,5 +1,7 @@
 import UIKit
 import KVNProgress
+import FirebaseAuth
+import SDWebImage
 
 class OfferDetailsViewController: UIViewController {
 
@@ -30,18 +32,37 @@ class OfferDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         offerView.titleLabel.text = offerModel.title
-        offerView.titleLabel.textColor = offerModel.image.isDark ? .white : .darkText
-        offerView.backgroundImageView.image = offerModel.image
+        if let imageURL = URL(string: offerModel.imageURL) {
+            offerView.backgroundImageView.sd_setImage(with: imageURL, completed: { [weak self] (image, _, _, _) in
+                self?.offerView.titleLabel.textColor = image?.isDark ?? false ? .white : .darkText
+            })
+        }
         offerView.descriptionLabel.text = offerModel.description
         offerView.dissmisButton.addTarget(self, action: #selector(dismissAction), for: .touchUpInside)
-        offerView.orderButton.addTarget(self, action: #selector(orderAction), for: .touchUpInside)
+        offerView.orderButton.addTarget(self, action: #selector(orderButtonAction), for: .touchUpInside)
     }
 
     @objc func dismissAction() {
         dismiss(animated: true, completion: nil)
     }
 
-    @objc func orderAction() {
+    @objc func orderButtonAction() {
+        guard let user = Auth.auth().currentUser else {
+            let phoneLoginViewController = PhoneLoginViewController()
+            phoneLoginViewController.callback = { [weak self] (user) in
+                self?.addOrderTo(user)
+            }
+            present(phoneLoginViewController, animated: true, completion: nil)
+            return
+        }
+        addOrderTo(user)
+    }
+
+    private func addOrderTo(_ user: User) {
+
+        
+
+
         KVNProgress.show()
         dismiss(animated: true) {
             guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }

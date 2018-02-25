@@ -7,7 +7,7 @@ import KVNProgress
 class JobDetailsViewController: UIViewController {
 
     fileprivate let disposeBag = DisposeBag()
-    fileprivate let model: JobModel
+    fileprivate let model: Variable<JobModel?>
 
     fileprivate let tableView: UITableView = {
         let tableView = UITableView()
@@ -18,8 +18,8 @@ class JobDetailsViewController: UIViewController {
         return tableView
     }()
 
-    init(model: JobModel) {
-        self.model = model
+    init(model: Variable<JobModel?>) {
+        self.model = model//Variable(model)
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -36,7 +36,7 @@ class JobDetailsViewController: UIViewController {
 
 extension JobDetailsViewController: BaseViewController {
     var controllerTitle: String {
-        return model.title
+        return model.value?.title ?? ""
     }
 
     func configureProperties() {
@@ -57,14 +57,15 @@ extension JobDetailsViewController: BaseViewController {
 
     func configureReactiveBinding() {
 
-        Observable.just(model.stages)
+        model.asObservable()
+            .map { $0?.stages ?? [] }
             .bind(to: tableView.rx.items(cellIdentifier: "cellIdentifier")) { [weak self] index, model, cell in
                 guard let cell = cell as? JobDetailsTableViewCell else { return }
                 cell.titleLabel.text = model.title
                 cell.progress = model.state == .completed ? 1.0 : 0.0
                 cell.frontView.alpha = model.state == .waiting ? 0.3 :  1.0
                 cell.topLineView.isHidden = index == 0
-                cell.bottomLineView.isHidden = index == (self?.model.stages.count ?? 0) - 1
+                cell.bottomLineView.isHidden = index == (self?.model.value?.stages.count ?? 0) - 1
 
                 switch(model.action, model.state) {
                 case (.none, _), (_, .waiting), (.document, .inProgress):

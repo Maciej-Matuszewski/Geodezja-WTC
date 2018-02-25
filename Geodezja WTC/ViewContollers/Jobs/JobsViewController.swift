@@ -17,7 +17,7 @@ class JobsViewController: UIViewController {
 
     fileprivate lazy var emptyStateView: UIView = {
         return EmptyStateView(
-            with: "Ops... There is nothing here :(",
+            with: "Ops... There is nothing here :(".localized,
             size: CGSize(
                 width: view.frame.width,
                 height: tableView.frame.height - (navigationController?.navigationBar.frame.height ?? 0) - (navigationController?.tabBarController?.tabBar.frame.height ?? 0) - 100
@@ -50,8 +50,7 @@ extension JobsViewController: BaseViewController {
     }
 
     func configureReactiveBinding() {
-
-        Observable.just(viewModel.jobs)
+        viewModel.jobs.asObservable()
             .do(onNext: { [weak self] models in
                 self?.tableView.tableHeaderView = models.isEmpty ? self?.emptyStateView : nil
             })
@@ -65,10 +64,21 @@ extension JobsViewController: BaseViewController {
             }
             .disposed(by: disposeBag)
 
+        viewModel.jobs.asObservable()
+            .map {[weak self] models -> JobModel? in
+                let indexPathRow = self?.viewModel.selectedIndexPath?.row ?? 0
+                if models.count > indexPathRow {
+                    return models[indexPathRow]
+                }
+                return nil
+            }
+            .bind(to: viewModel.selectedModel)
+            .disposed(by: disposeBag)
+
         tableView.rx.itemSelected
             .subscribe(onNext: { [weak self] indexPath in
-                guard let model = self?.viewModel.jobs[indexPath.row] else { return }
-                self?.navigationController?.pushViewController(JobDetailsViewController(model: model), animated: true)
+                self?.viewModel.selectedIndexPath = indexPath
+                self?.navigationController?.pushViewController(JobDetailsViewController(model: self?.viewModel.selectedModel ?? Variable(nil)), animated: true)
             })
             .disposed(by: disposeBag)
     }

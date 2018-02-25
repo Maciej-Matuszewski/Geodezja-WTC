@@ -1,6 +1,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import SDWebImage
 
 class HomeViewController: UIViewController {
 
@@ -49,18 +50,21 @@ extension HomeViewController: BaseViewController {
     }
 
     func configureReactiveBinding() {
-        Observable.just(viewModel.offers)
+        viewModel.offers.asObservable()
             .bind(to: tableView.rx.items(cellIdentifier: "cellIdentifier")) { index, model, cell in
                 guard let cell = cell as? HomeTableViewCell else { return }
                 cell.titleLabel.text = model.title
-                cell.titleLabel.textColor = model.image.isDark ? .white : .darkText
-                cell.backgroundImageView.image = model.image
+                if let imageURL = URL(string: model.imageURL) {
+                    cell.backgroundImageView.sd_setImage(with: imageURL, completed: { [weak cell] (image, _, _, _) in
+                        cell?.titleLabel.textColor = image?.isDark ?? false ? .white : .darkText
+                    })
+                }
             }
             .disposed(by: disposeBag)
 
         tableView.rx.itemSelected
             .subscribe(onNext: { [weak self] indexPath in
-                guard let offerModel = self?.viewModel.offers[indexPath.row] else { return }
+                guard let offerModel = self?.viewModel.offers.value[indexPath.row] else { return }
                 let detailsViewController = OfferDetailsViewController(offerModel: offerModel)
                 detailsViewController.transitioningDelegate = self
                 self?.present(detailsViewController, animated: true, completion: nil)

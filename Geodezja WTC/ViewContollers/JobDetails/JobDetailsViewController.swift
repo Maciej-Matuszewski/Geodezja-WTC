@@ -3,6 +3,8 @@ import RxSwift
 import RxCocoa
 import SafariServices
 import KVNProgress
+import FirebaseDatabase
+import FirebaseAuth
 
 class JobDetailsViewController: UIViewController {
 
@@ -92,15 +94,19 @@ extension JobDetailsViewController: BaseViewController {
             }
             .disposed(by: disposeBag)
 
-        tableView.rx.modelSelected(JobStageModel.self)
-            .subscribe(onNext: { [weak self] model in
+        tableView.rx.itemSelected
+            .subscribe(onNext: { [weak self] indexPath in
+                guard let model = self?.model.value?.stages[indexPath.row] else { return }
                 switch(model.action, model.state) {
                 case (.document, .completed):
                     guard let urlString = model.documentURL else { return }
                     self?.presentDocument(with: urlString)
                     return
                 case (.accept, .inProgress):
-                    self?.accept(stage: model)
+                    self?.accept(stage: model, withNumber: indexPath.row)
+                    return
+                case (.file, .inProgress):
+                    self?.uploadFile()
                     return
                 default:
                     return
@@ -117,22 +123,64 @@ extension JobDetailsViewController: BaseViewController {
         present(safariViewController, animated: true, completion: nil)
     }
 
-    private func accept(stage: JobStageModel) {
+    private func accept(stage: JobStageModel, withNumber number: Int) {
         let alertController = UIAlertController(title: stage.title, message: "Would you like to accept this stage?".localized, preferredStyle: .alert)
         alertController.addAction(
-            UIAlertAction(title: "Yes".localized, style: .default, handler: { _ in
+            UIAlertAction(title: "Yes".localized, style: .default, handler: { [weak self] _ in
                 KVNProgress.show()
-                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5, execute: {
+
+                guard let userID = Auth.auth().currentUser?.uid,
+                    let jobID = self?.model.value?.id
+                else {
+                    KVNProgress.showError()
+                    return
+                }
+                Database.database().reference(withPath: "jobs/\(userID)/\(jobID)/stages/\(number)/state").setValue(2, withCompletionBlock: { (error, reference) in
+                    if error != nil {
+                        KVNProgress.showError()
+                        return
+                    }
                     KVNProgress.showSuccess()
                 })
             })
         )
         alertController.addAction(
-            UIAlertAction(title: "Contact me".localized, style: .default, handler: { _ in
+            UIAlertAction(title: "Contact me".localized, style: .default, handler: { [weak self] _ in
                 KVNProgress.show()
-                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5, execute: {
+                let currentDate: String = {
+                    let date = Date()
+                    let calender = Calendar.current
+                    let components = calender.dateComponents([.year,.month,.day,.hour,.minute,.second], from: date)
+
+                    let year = components.year
+                    let month = components.month
+                    let day = components.day
+                    let hour = components.hour
+                    let minute = components.minute
+                    let second = components.second
+
+                    let today_string = String(year!) + "-" + String(month!) + "-" + String(day!) + " " + String(hour!)  + ":" + String(minute!) + ":" +  String(second!)
+
+                    return today_string
+                }()
+
+                let reference = Database.database()
+                let request: [String: Any?] = [
+                    "jobID": self?.model.value?.id ?? "-",
+                    "userID": Auth.auth().currentUser?.uid ?? "-",
+                    "userPhone": Auth.auth().currentUser?.phoneNumber ?? "-",
+                    "resolved": false,
+                    "date": currentDate
+                ]
+
+                reference.reference(withPath: "contactRequests").childByAutoId().setValue(request, withCompletionBlock: { (error, reference) in
+                    if error != nil {
+                        KVNProgress.showError()
+                        return
+                    }
                     KVNProgress.showSuccess()
                 })
+
             })
         )
         alertController.addAction(
@@ -140,5 +188,8 @@ extension JobDetailsViewController: BaseViewController {
         )
         alertController.view.tintColor = .main
         present(alertController, animated: true, completion: nil)
+    }
+
+    func uploadFile() {
     }
 }
